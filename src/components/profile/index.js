@@ -1,5 +1,5 @@
-import React from 'react';
-import * as S from './styled'
+import React from "react";
+import * as S from "./styled"
 
 const Profile = () => {
   return (
@@ -14,9 +14,9 @@ const Profile = () => {
           <S.WrapperUsername>
             <h3>
               Username: <a 
-              href='https://github.com/lucassousa25'
-              target='_blank'
-              rel='noreferrer'
+              href="https://github.com/lucassousa25"
+              target="_blank"
+              rel="noreferrer"
               >
                 Lucas S
               </a>
