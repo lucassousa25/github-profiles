@@ -8,13 +8,13 @@ const Profile = () => {
   return (
     <S.Wrapper>
       <S.WrapperImage 
-        src="https://avatars.githubusercontent.com/u/32560743?v=4"
+        src={githubState.user.avatar_url}
         alt="Avatar User's Profile" 
       />
       <S.WrapperInfoUser>
         <div>
           <h1>{githubState.user.name}</h1>
-          <S.WrapperUsername>
+          <S.WrapperUserGeneric>
             <h3>
               Username: <a 
               href={githubState.user.html_url}
@@ -24,7 +24,30 @@ const Profile = () => {
                 {githubState.user.login}
               </a>
             </h3>
-          </S.WrapperUsername>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>
+              Company:
+            </h3>
+            <span>{githubState.user.company}</span>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>
+              Location:
+            </h3>
+            <span>{githubState.user.location}</span>
+          </S.WrapperUserGeneric>
+          <S.WrapperUserGeneric>
+            <h3>
+              Blog: <a 
+              href={githubState.user.blog}
+              target="_blank"
+              rel="noreferrer"
+              >
+                {githubState.user.blog}
+              </a>
+            </h3>
+          </S.WrapperUserGeneric>
         </div>
         <S.WrapperStatusCount>
           <div>
@@ -32,8 +55,8 @@ const Profile = () => {
             <span>{githubState.user.followers}</span>
           </div>
           <div>
-            <h4>Followings</h4>
-            <span>{githubState.user.followings}</span>
+            <h4>Following</h4>
+            <span>{githubState.user.following}</span>
           </div>
           <div>
             <h4>Gists</h4>

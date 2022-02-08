@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import useGithub from "../../hooks/github-hooks";
+
 import * as S from "./styled";
 
 const Header = () => {
@@ -17,9 +18,9 @@ const Header = () => {
         <input 
           type="text" 
           placeholder="Digite o username para pesquisa" 
-          onChange={submitGetUser}  
+          onChange={(e) => setusernameForSearch(e.target.value)}  
         />
-        <button type="submit">
+        <button type="submit" onClick={submitGetUser}>
           <span>Buscar</span>
         </button>
       </S.Wrapper>
