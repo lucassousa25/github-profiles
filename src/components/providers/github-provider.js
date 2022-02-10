@@ -12,6 +12,7 @@ const GithubProvider = ({ children }) => {
   const [githubState, setGithubState] = useState({
 
     loading: false,
+    hasUser: false,
     user: {
       login: undefined,
       name: undefined,
@@ -31,10 +32,17 @@ const GithubProvider = ({ children }) => {
   });
 
   const getUser = (username) => {
+
+    setGithubState((prevState) => ({
+      ...prevState,
+      loading: !prevState.loading
+    }));
+
     api.get(`users/${username}`)
     .then(({ data }) => {
       setGithubState(prevState => ({
         ...prevState,
+        hasUser: true,
         user: {
           login: data.login,
           name: data.name,
@@ -49,7 +57,12 @@ const GithubProvider = ({ children }) => {
           public_repos: data.public_repos
         }
       }))
-    })
+    }).finally(() => {
+      setGithubState((prevState) => ({
+        ...prevState,
+        loading: !prevState.loading
+      }));
+    });
   }
 
   const contextValue = {
