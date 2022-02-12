@@ -14,6 +14,7 @@ const GithubProvider = ({ children }) => {
     loading: false,
     hasUser: false,
     user: {
+      id: undefined,
       login: undefined,
       name: undefined,
       avatar_url: undefined,
@@ -44,6 +45,7 @@ const GithubProvider = ({ children }) => {
         ...prevState,
         hasUser: true,
         user: {
+          id: data.id,
           login: data.login,
           name: data.name,
           avatar_url: data.avatar_url,
@@ -65,9 +67,22 @@ const GithubProvider = ({ children }) => {
     });
   }
 
+  const getUserRepos = () => {
+
+    api.get(`users/${ githubState.user.login }/repos`)
+    .then(({ data }) => {
+      console.log('data: ' + JSON.stringify(data))
+      setGithubState((prevState) => ({
+        ...prevState,
+        repositories: data
+      }));
+    });
+  }
+
   const contextValue = {
     githubState,
     getUser: useCallback((username) => getUser(username), []),
+    getUserRepos: useCallback(() => getUserRepos(), []),
   }
   
   return (
