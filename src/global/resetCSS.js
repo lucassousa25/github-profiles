@@ -38,6 +38,8 @@ html {
 
 body {
   margin: 0;
+  background: rgb(255,255,255);
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(0,212,255,1) 27%, rgba(9,9,121,1) 100%);
 }
 
 /**

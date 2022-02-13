@@ -1,26 +1,23 @@
-import styled from "styled-components";
+/* eslint-disable no-use-before-define */
+import styled, {keyframes} from "styled-components";
 
 export const Wrapper = styled.div`
-
-  h1 {
-    text-align: center;
-    font-size: 45pt;
-    font-weight: bold;
-  }
 
   p {
     text-align: center;
     font-size: 20pt;
     font-style: italic;
-    color: #aaa;
+    color: #fff;
+    text-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
   }
   
   Header {
     margin-top: 10px;
     width: 40%;
-    border: 2px solid #ccc;
+    border: 1px solid #fff;
     box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
     border-radius: 40px;
+    background: #fff;
   }
   
   input {
@@ -60,4 +57,58 @@ export const WrapperAlign = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+`;
+
+const animateBackMove = keyframes`
+  0% {
+    transform: translate(0)
+  }
+  20% {
+    transform: translate(-5px, 5px)
+  }
+  40% {
+    transform: translate(-5px, -5px)
+  }
+  60% {
+    transform: translate(5px, 5px)
+  }
+  80% {
+    transform: translate(5px, -5px)
+  }
+  to {
+    transform: translate(0)
+  }
+`;
+
+export const WrapperTitle = styled.h1.attrs(() => ({
+  'data-glitch': "GitHub Perfis"
+}))`
+text-align: center;
+font-size: 50pt;
+font-weight: bold;
+position: relative;
+
+&:before, &:after {
+  position: absolute;
+  content: attr(data-glitch);
+  top: 0;
+  left: 0;
+  opacity: .8;
+} &:after {
+  color: #0f0;
+  z-index: -2;
+} &:before {
+  color: #f0f;
+  z-index: -1;
+}
+&:hover {
+  &:before {
+    // eslint-disable-next-line no-use-before-define
+    animation: ${animateBackMove} .3s cubic-bezier(.25, .46, .45, .94) both infinite
+  }
+  &:after {
+    // eslint-disable-next-line no-use-before-define
+    animation: ${animateBackMove} .3s cubic-bezier(.25, .46, .45, .94) reverse both infinite
+  }
+}
 `;
