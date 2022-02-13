@@ -17,7 +17,7 @@ const Header = () => {
       <S.Wrapper>
         <input 
           type="text" 
-          placeholder="Digite o username para pesquisa" 
+          placeholder="Search Github User..." 
           onChange={(e) => setusernameForSearch(e.target.value)}  
         />
         <button type="submit" onClick={submitGetUser}>

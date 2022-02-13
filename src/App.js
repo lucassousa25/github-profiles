@@ -11,22 +11,24 @@ const App = () => {
   const { githubState } = useGithub();
 
   return (
-    <Layout>
+    <>
       {githubState.hasUser ? (
-        <>
-          {githubState.loading ? (
-            <p>Loading</p>
-          ) : (
-            <>
-              <Profile />
-              <Repositories />
+        <Layout>
+          <>
+            {githubState.loading ? (
+              <p>Loading</p>
+            ) : (
+              <>
+                <Profile />
+                <Repositories />
+              </>
+            )}
             </>
-          )}
-        </>
-      ) : (
-        <NoSearch />
-      )}
-    </Layout>
+          </Layout>
+        ) : (
+          <NoSearch />
+        )}
+    </>
   );
 }
 
