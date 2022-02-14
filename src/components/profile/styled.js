@@ -3,6 +3,8 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   display: flex;
   align-items: flex-start;
+  background: #fff;
+  padding: 10px;
 `;
 
 export const WrapperInfoUser = styled.div`
@@ -34,12 +36,15 @@ export const WrapperStatusCount = styled.div`
     margin: 10px;
     text-align: center;
   }
+  background: #2c5282;
+  color: #fff;
+  border-radius: 25px;
 `;
 
 export const WrapperUserGeneric = styled.div`
   display: flex;
   align-items: center;
-  margin-top: 10px;
+  margin: 7px 0;
   a {
     color: blue;
   }
@@ -47,6 +52,7 @@ export const WrapperUserGeneric = styled.div`
 
 export const WrapperImage = styled.img`
   border-radius: 50%;
-  width: 12%;
+  width: 200px;
   margin: 10px;
+  box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
 `;

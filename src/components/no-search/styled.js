@@ -1,63 +1,4 @@
-/* eslint-disable no-use-before-define */
 import styled, {keyframes} from "styled-components";
-
-export const Wrapper = styled.div`
-
-  p {
-    text-align: center;
-    font-size: 20pt;
-    font-style: italic;
-    color: #fff;
-    text-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
-  }
-  
-  Header {
-    margin-top: 10px;
-    width: 40%;
-    border: 1px solid #fff;
-    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
-    border-radius: 40px;
-    background: #fff;
-  }
-  
-  input {
-    border: none;
-    box-shadow: none;
-    height: 60px;
-    padding: 0 15px;
-
-    &:focus {
-      outline: none;
-    }
-  }
-
-  button {
-    background-color: #225ed8;
-    padding: 8px 16px;
-    margin: 0 16px;
-    border-radius: 100px;
-    border: none;
-
-    &:hover {
-      background-color: #2c5282;
-    }
-
-    span {
-      font-weight: bold;
-      color: #fff;
-    }
-
-  }
-`;
-
-export const WrapperAlign = styled.div`
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-`;
 
 const animateBackMove = keyframes`
   0% {
@@ -112,3 +53,64 @@ position: relative;
   }
 }
 `;
+
+export const Wrapper = styled.div`
+
+p {
+  text-align: center;
+  font-size: 20pt;
+  font-style: italic;
+  color: #fff;
+  text-shadow: 0 0 0.3em rgba(0, 0, 0, 0.5);
+}
+  
+  Header {
+    margin-top: 10px;
+    width: 40%;
+    border: 1px solid #fff;
+    box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+    border-radius: 40px;
+    background: #fff;
+    justify-content: none;
+    flex-direction: column;
+  }
+  
+  input {
+    border: none;
+    box-shadow: none;
+    padding: 0 15px;
+    width: 100%;
+    height: 44px;
+    
+    &:focus {
+      outline: none;
+    }
+  }
+  
+  button {
+    background-color: #225ed8;
+    padding: 2px 16px;
+    margin: 0 12px;
+    border-radius: 100px;
+    border: none;
+    
+    &:hover {
+      background-color: #2c5282;
+    }
+    
+    span {
+      font-weight: bold;
+      color: #fff;
+    }
+    
+  }
+  `;
+  
+  export const WrapperAlign = styled.div`
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  `;

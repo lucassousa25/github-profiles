@@ -4,15 +4,22 @@ export const Wrapper = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-between;
-  padding: 5px;
+  padding: 10px 0 10px 0;
+
+  justify-content: center;
+  flex-direction: inline;
   
   input {
     border: 1px solid #ccc;
-    border-radius: 8px;
-    width: 100%;
+    border-radius: 22px;
+    width: 50%;
     height: 44px;
     padding: 5px;
     box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
+
+    &:focus {
+      outline: none;
+    }
   }
 
   button {
@@ -20,6 +27,7 @@ export const Wrapper = styled.div`
     padding: 8px 16px;
     margin: 0 12px;
     border-radius: 8px;
+    border: none;
 
     &:hover {
       background-color: #2c5282;
