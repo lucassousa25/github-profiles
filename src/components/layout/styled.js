@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-export const WrapperLayout = styled.section`
+export const WrapperLayout = styled.body`
   position: absolute;
-  height: 100%;
   width: 100%;
+  height: 100vh;
   margin: 0;
   background: #eee;
 `;

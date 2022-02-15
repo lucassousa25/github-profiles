@@ -3,29 +3,29 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 10px;
   border-radius: 8px;
-  border: 1px solid #ccc;
   margin: 10px;
   width: 300px;
   height: 150px;
-  align-content: center;
+  background: #888;
 `;
 
 export const WrapperTitle = styled.h2`
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   margin: 8px 0;
+  color: #fff;
 `;
 
 export const WrapperFullName = styled.h4`
   font-size: 16px;
   font-weight: bold;
   margin: 8px 0;
-  color: #2d3748;
+  color: #ddd;
 `;
 
 export const WrapperLink = styled.a`
   font-size: 16px;
   font-weight: bold;
   margin: 8px 0;
-  color: #3182ce;
+  color: #2c5282;
 `;
