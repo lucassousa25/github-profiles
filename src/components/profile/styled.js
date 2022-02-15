@@ -27,6 +27,11 @@ export const WrapperInfoUser = styled.div`
     font-size: 16px;
     font-weight: bold;
   }
+  h3 > span {
+    font-size: 16px;
+    font-weight: normal;
+    font-style: italic;
+  }
 `;
 
 export const WrapperStatusCount = styled.div`

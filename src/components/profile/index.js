@@ -32,9 +32,8 @@ const Profile = () => {
           </S.WrapperUserGeneric>
           <S.WrapperUserGeneric>
             <h3>
-              Location:
+              Location: <span>{githubState.user.location}</span>
             </h3>
-            <span>{githubState.user.location}</span>
           </S.WrapperUserGeneric>
           <S.WrapperUserGeneric>
             <h3>
