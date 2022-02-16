@@ -42,7 +42,14 @@ const Repositories = () => {
             <S.WrapperList>
               <Carousel breakPoints={breakpoints}>
                 {githubState.repositories.map((item) => (
-                  <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} description={item.description} />
+                  <RepositoryItem 
+                    key={item.id} 
+                    name={item.name} 
+                    linkToRepo={item.html_url} 
+                    description={item.description} 
+                    stargazers_count={item.stargazers_count}
+                    forks_count={item.forks_count} 
+                  />
                 ))}
               </Carousel>
             </S.WrapperList>
@@ -51,7 +58,14 @@ const Repositories = () => {
             <S.WrapperList>
             <Carousel breakPoints={breakpoints}>
                 {githubState.starred.map((item) => (
-                  <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} description={item.description} />
+                  <RepositoryItem 
+                    key={item.id} 
+                    name={item.name} 
+                    linkToRepo={item.html_url} 
+                    description={item.description} 
+                    stargazers_count={item.stargazers_count}
+                    forks_count={item.forks_count} 
+                  />
                 ))}
             </Carousel>
             </S.WrapperList>

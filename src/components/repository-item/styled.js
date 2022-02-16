@@ -3,12 +3,13 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 10px;
   border-radius: 8px;
-  margin: 0 20px;
+  margin: auto 15px;
   width: 100%;
   height: 200px;
   background: #888;
   text-align: center;
   position: relative;
+  justify-content: space-between;
 `;
 
 export const WrapperTitle = styled.h2`
@@ -33,9 +34,11 @@ export const WrapperLink = styled.a`
 `;
 
 export const WrapperOthersInfo = styled.div`
+  display: flex;
   border-top: 1px solid #fff;
   text-align: center;
   align-items: center;
+  justify-content: center;
   position: absolute;
   bottom: 0;
   width: 90%;
@@ -44,6 +47,6 @@ export const WrapperOthersInfo = styled.div`
   span {
     color: #fff;
     margin: 0 5px;
-    font-size: 13pt;
+    font-size: 12pt;
   }
 `;
