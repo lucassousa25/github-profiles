@@ -7,6 +7,7 @@ const Profile = () => {
 
   return (
     <S.Wrapper>
+      <section>
       <S.WrapperImage 
         src={githubState.user.avatar_url}
         alt="Avatar User's Profile" 
@@ -27,7 +28,7 @@ const Profile = () => {
           </S.WrapperUserGeneric>
           <S.WrapperUserGeneric>
             <h3>
-              Company: <span>{githubState.user.company}</span>
+              Company: <span>{githubState.user.company ? githubState.user.company : "Não informado"}</span>
             </h3>
           </S.WrapperUserGeneric>
           <S.WrapperUserGeneric>
@@ -42,7 +43,7 @@ const Profile = () => {
               target="_blank"
               rel="noreferrer"
               >
-                {githubState.user.blog}
+                {githubState.user.blog ? githubState.user.blog : "Não informado"}
               </a>
             </h3>
           </S.WrapperUserGeneric>
@@ -66,6 +67,7 @@ const Profile = () => {
           </div>
         </S.WrapperStatusCount>
       </S.WrapperInfoUser>
+      </section>
     </S.Wrapper>
   );
 }
