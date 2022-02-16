@@ -24,7 +24,7 @@ export const WrapperTab = styled(Tab)`
   cursor: pointer;
   z-index: 99999;
   color: #fff;
-  margin: 8px 15px;
+  margin: 0 15px;
   background-color: #225ed8;
   
   &:focus {
@@ -74,6 +74,10 @@ export const WrapperList = styled.div`
       box-shadow: inset 0 0 1px 1px #111;
   }
 
+  .rec-dot {
+    height: 8px;
+    width: 8px;
+  }
   .rec-dot_active {
     background-color: #225ed8;
     box-shadow: 0 0 1px 3px #225ed8;

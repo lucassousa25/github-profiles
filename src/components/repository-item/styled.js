@@ -1,15 +1,22 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  padding: 10px;
+  padding: 0 10px;
   border-radius: 8px;
-  margin: auto 15px;
+  margin: 20px;
   width: 100%;
   height: 200px;
-  background: #888;
+  background: #2c5282;
   text-align: center;
   position: relative;
-  justify-content: space-between;
+  transition: transform .3s;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #225ed8;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+  }
 `;
 
 export const WrapperTitle = styled.h2`
@@ -27,10 +34,8 @@ export const WrapperDescription = styled.p`
 `;
 
 export const WrapperLink = styled.a`
-  font-size: 16px;
-  font-weight: bold;
-  margin: 8px 0;
-  color: #2c5282;
+  display: flex;
+  width: 100%;
 `;
 
 export const WrapperOthersInfo = styled.div`
