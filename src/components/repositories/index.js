@@ -1,11 +1,20 @@
 import React, { useState, useEffect } from "react";
 import useGithub from "../../hooks/github-hooks";
+
+import Carousel from "react-elastic-carousel";
 import RepositoryItem from "../repository-item";
 import * as S from "./styled";
 
 const Repositories = () => {
   const { githubState, getUserRepos, getUserStarred } = useGithub();
   const [hasUserForSearchRepos, setHasUserForSearchRepos] = useState(false);
+
+  const breakpoints = [
+    {width: 1, itemsToShow: 1},
+    {width: 500, itemsToShow: 2},
+    {width: 768, itemsToShow: 3},
+    {width: 1200, itemsToShow: 4}
+  ]
 
   useEffect(() => {
     if(!!githubState.user.login) {
@@ -31,16 +40,20 @@ const Repositories = () => {
           </S.WrapperTabList>
           <S.WrapperTabPanel>
             <S.WrapperList>
-              {githubState.repositories.map((item) => (
-                <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} fullName={item.full_name} />
-              ))}
+              <Carousel breakPoints={breakpoints}>
+                {githubState.repositories.map((item) => (
+                  <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} fullName={item.full_name} />
+                ))}
+              </Carousel>
             </S.WrapperList>
           </S.WrapperTabPanel>
           <S.WrapperTabPanel>
             <S.WrapperList>
-              {githubState.starred.map((item) => (
-                <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} fullName={item.full_name} />
-              ))}
+            <Carousel breakPoints={breakpoints}>
+                {githubState.starred.map((item) => (
+                  <RepositoryItem key={item.id} name={item.name} linkToRepo={item.html_url} fullName={item.full_name} />
+                ))}
+            </Carousel>
             </S.WrapperList>
           </S.WrapperTabPanel>
         </S.WrapperTabs>
