@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import useGithub from "../../hooks/github-hooks";
 
+import { GoFileDirectory, GoStar } from "react-icons/go";
 import Carousel from "react-elastic-carousel";
 import RepositoryItem from "../repository-item";
 import * as S from "./styled";
@@ -35,8 +36,8 @@ const Repositories = () => {
           selectedTabPanelClassName="is-selected"
         >
           <S.WrapperTabList>
-            <S.WrapperTab>Repositories</S.WrapperTab>
-            <S.WrapperTab>Starred</S.WrapperTab>
+            <S.WrapperTab><GoFileDirectory /> Repositories</S.WrapperTab>
+            <S.WrapperTab>Starred <GoStar /></S.WrapperTab>
           </S.WrapperTabList>
           <S.WrapperTabPanel>
             <S.WrapperList>

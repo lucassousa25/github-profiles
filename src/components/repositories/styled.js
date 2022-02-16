@@ -13,26 +13,25 @@ export const WrapperTabList = styled(TabList)`
   padding: 4px;
   display: flex;
   margin: 0;
+  justify-content: center;
 `;
 WrapperTabList.tabsRole = "TabList";
 
 export const WrapperTab = styled(Tab)`
-  border-radius: 16px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  padding: 10px 20px;
   user-select: none;
   cursor: pointer;
-  z-index: 99999;
   color: #fff;
-  margin: 0 15px;
   background-color: #225ed8;
+  
   
   &:focus {
     outline: none;
   }
   
   &.is-selected {
-    box-shadow: 3px 2px 10px rgba(0, 0, 0, 0.2);
+    background-color: #2c5282;
+    font-weight: bold;
   }
 `;
 WrapperTab.tabsRole = "Tab";
