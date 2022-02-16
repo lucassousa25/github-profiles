@@ -52,6 +52,7 @@ export const WrapperOthersInfo = styled.div`
   span {
     color: #fff;
     margin: 0 5px;
-    font-size: 12pt;
+    font-size: 11pt;
+    font-weight: bold;
   }
 `;

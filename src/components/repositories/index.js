@@ -40,7 +40,7 @@ const Repositories = () => {
           </S.WrapperTabList>
           <S.WrapperTabPanel>
             <S.WrapperList>
-              <Carousel breakPoints={breakpoints}>
+              <Carousel breakPoints={breakpoints} showEmptySlots>
                 {githubState.repositories.map((item) => (
                   <RepositoryItem 
                     key={item.id} 
@@ -56,7 +56,7 @@ const Repositories = () => {
           </S.WrapperTabPanel>
           <S.WrapperTabPanel>
             <S.WrapperList>
-            <Carousel breakPoints={breakpoints}>
+            <Carousel breakPoints={breakpoints} showEmptySlots>
                 {githubState.starred.map((item) => (
                   <RepositoryItem 
                     key={item.id} 
