@@ -7,12 +7,14 @@ export const Wrapper = styled.div`
   width: 100%;
   height: 200px;
   background: #888;
+  text-align: center;
+  position: relative;
 `;
 
 export const WrapperTitle = styled.h2`
   font-size: 20px;
   font-weight: bold;
-  margin: 8px 0;
+  margin: 8px 5px;
   color: #fff;
   border-bottom: 1px solid #fff;
 `;
@@ -28,4 +30,20 @@ export const WrapperLink = styled.a`
   font-weight: bold;
   margin: 8px 0;
   color: #2c5282;
+`;
+
+export const WrapperOthersInfo = styled.div`
+  border-top: 1px solid #fff;
+  text-align: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  width: 90%;
+  padding: 5px 0;
+
+  span {
+    color: #fff;
+    margin: 0 5px;
+    font-size: 13pt;
+  }
 `;
