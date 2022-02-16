@@ -14,13 +14,13 @@ export const WrapperTitle = styled.h2`
   font-weight: bold;
   margin: 8px 0;
   color: #fff;
+  border-bottom: 1px solid #fff;
 `;
 
-export const WrapperFullName = styled.h4`
-  font-size: 16px;
-  font-weight: bold;
-  margin: 8px 0;
-  color: #ddd;
+export const WrapperDescription = styled.p`
+  font-size: 11pt;
+  color: #fff;
+  font-style: italic;
 `;
 
 export const WrapperLink = styled.a`
