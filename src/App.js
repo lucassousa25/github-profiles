@@ -4,6 +4,7 @@ import Layout from './components/layout';
 import NoSearch from './components/no-search';
 import Profile from './components/profile';
 import Repositories from './components/repositories';
+import Loading from './components/loading';
 
 import useGithub from './hooks/github-hooks';
 
@@ -16,7 +17,7 @@ const App = () => {
         <Layout>
           <>
             {githubState.loading ? (
-              <p>Loading</p>
+              <Loading />
             ) : (
               <>
                 <Profile />

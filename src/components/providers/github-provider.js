@@ -33,38 +33,40 @@ const GithubProvider = ({ children }) => {
   });
 
   const getUser = (username) => {
+    setTimeout(() => {
 
-    setGithubState((prevState) => ({
-      ...prevState,
-      loading: !prevState.loading
-    }));
-
-    api.get(`users/${username}`)
-    .then(({ data }) => {
-      setGithubState(prevState => ({
-        ...prevState,
-        hasUser: true,
-        user: {
-          id: data.id,
-          login: data.login,
-          name: data.name,
-          avatar_url: data.avatar_url,
-          html_url: data.html_url,
-          blog: data.blog,
-          company: data.company,
-          location: data.location,
-          followers: data.followers,
-          following: data.following,
-          public_gists: data.public_gists,
-          public_repos: data.public_repos
-        }
-      }))
-    }).finally(() => {
       setGithubState((prevState) => ({
         ...prevState,
         loading: !prevState.loading
       }));
-    });
+    }, 1000)
+  
+      api.get(`users/${username}`)
+      .then(({ data }) => {
+        setGithubState(prevState => ({
+          ...prevState,
+          hasUser: true,
+          user: {
+            id: data.id,
+            login: data.login,
+            name: data.name,
+            avatar_url: data.avatar_url,
+            html_url: data.html_url,
+            blog: data.blog,
+            company: data.company,
+            location: data.location,
+            followers: data.followers,
+            following: data.following,
+            public_gists: data.public_gists,
+            public_repos: data.public_repos
+          }
+        }))
+      }).finally(() => {
+        setGithubState((prevState) => ({
+          ...prevState,
+          loading: !prevState.loading
+        }));
+      });
   }
 
   const getUserRepos = (username) => {
@@ -77,7 +79,6 @@ const GithubProvider = ({ children }) => {
         repositories: data
       }));
     });
-  
   }
   const getUserStarred = (username) => {
 

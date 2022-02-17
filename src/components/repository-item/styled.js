@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Wrapper = styled.div`
   padding: 0 10px;
   border-radius: 8px;
-  margin: 20px;
+  margin: 0 20px;
   width: 100%;
   height: 200px;
   background: #2c5282;
@@ -28,7 +28,7 @@ export const WrapperTitle = styled.h2`
 `;
 
 export const WrapperDescription = styled.p`
-  font-size: 11pt;
+  font-size: 12pt;
   color: #fff;
   font-style: italic;
 `;
@@ -36,6 +36,7 @@ export const WrapperDescription = styled.p`
 export const WrapperLink = styled.a`
   display: flex;
   width: 100%;
+  margin: 20px 0;
 `;
 
 export const WrapperOthersInfo = styled.div`
