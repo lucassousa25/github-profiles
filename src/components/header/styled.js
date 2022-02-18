@@ -14,7 +14,7 @@ export const Wrapper = styled.div`
     border-radius: 22px;
     width: 50%;
     height: 44px;
-    padding: 5px;
+    padding: 5px 5px 5px 10px;
     box-shadow: 0 0 0.3em rgba(0, 0, 0, 0.3);
 
     &:focus {

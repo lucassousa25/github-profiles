@@ -78,7 +78,7 @@ p {
   input {
     border: none;
     box-shadow: none;
-    padding: 0 15px;
+    padding: 0 10px;
     width: 100%;
     height: 44px;
     
@@ -102,15 +102,14 @@ p {
       font-weight: bold;
       color: #fff;
     }
-    
   }
-  `;
+`;
   
-  export const WrapperAlign = styled.div`
+export const WrapperAlign = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  `;
+`;

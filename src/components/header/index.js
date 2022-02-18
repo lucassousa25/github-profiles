@@ -12,13 +12,20 @@ const Header = () => {
     return getUser(usernameForSearch);
   }
 
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      submitGetUser();
+    }
+  }
+
   return (
     <header>
       <S.Wrapper>
         <input 
           type="text" 
           placeholder="Search Github User..." 
-          onChange={(e) => setusernameForSearch(e.target.value)}  
+          onChange={(e) => setusernameForSearch(e.target.value)}
+          onKeyDown={handleKeyDown}  
         />
         <button type="submit" onClick={submitGetUser}>
           <span>Buscar</span>

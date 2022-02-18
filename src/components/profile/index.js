@@ -14,7 +14,7 @@ const Profile = () => {
       />
       <S.WrapperInfoUser>
         <div>
-          <h1>{githubState.user.name}</h1>
+          <h1>{githubState.user.name ? githubState.user.name : "Não informado"}</h1>
           <S.WrapperUserGeneric>
             <h3>
               Username: <a 
