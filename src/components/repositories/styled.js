@@ -39,7 +39,6 @@ WrapperTab.tabsRole = "Tab";
 export const WrapperTabPanel = styled(TabPanel)`
   padding: 8px;
   display: none;
-  margin-top: -5px;
 
   &.is-selected {
     display: block;

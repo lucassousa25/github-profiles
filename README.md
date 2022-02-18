@@ -2,7 +2,7 @@
 
 Projeto desenvolvido com as Tecnologias React / Styled Components
 
-## Dependencies
+## Dependencies / Lib's
 
 * "axios": "^0.25.0",
 * "react": "^17.0.2",

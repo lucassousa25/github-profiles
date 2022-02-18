@@ -7,7 +7,7 @@ const NoSearch = () => {
     <S.Wrapper>
       <S.WrapperAlign>
         <S.WrapperTitle>GitHub Perfis</S.WrapperTitle>
-        <p>Faça uma busca dos perfis dos Devs e visulize seus repositórios</p>
+        <p>Faça uma busca dos perfis dos Devs e visualize seus repositórios</p>
         <Header />
       </S.WrapperAlign>
     </S.Wrapper>
