@@ -1,6 +1,8 @@
 import React, { createContext, useCallback, useState } from "react";
 import api from "../../services/api";
 
+import { toast } from "react-toastify";
+
 export const GithubContext = createContext({
   loading: false,
   user: {},
@@ -61,7 +63,15 @@ const GithubProvider = ({ children }) => {
             public_repos: data.public_repos
           }
         }))
-      }).finally(() => {
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('User not found!!', {
+          progress: undefined,
+          theme: "colored"
+        });
+      })
+      .finally(() => {
         setGithubState((prevState) => ({
           ...prevState,
           loading: !prevState.loading
